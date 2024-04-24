@@ -1,0 +1,1 @@
+powershell 'for (;;) { [Console]::Beep(810, 700); }'
