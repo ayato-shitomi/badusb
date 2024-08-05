@@ -6,7 +6,7 @@ def print_str(s):
 
 	print("\033[92m[+]",s,"\033[0m")
 
-with open('./basic_rev.txt', 'r') as f:
+with open('./shell/basic_rev.txt', 'r') as f:
 	data = f.read()
 
 print_str("Opening file...")
@@ -57,9 +57,9 @@ print(mass_var)
 print()
 
 print_str("Writing to file...")
-with open('./mass_rev.txt', 'w') as f:
+with open('./shell/mass_rev.txt', 'w') as f:
 	f.write(mass_var)
-print_str("Success to write file: ./mass_rev.txt")
+print_str("Success to write file: ./shell/mass_rev.txt")
 print()
 
 print_str("Encoding to base64...")
