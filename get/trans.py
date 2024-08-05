@@ -7,10 +7,13 @@ with open('./url.txt', 'r') as f:
 	url = f.read().replace('\n', '')
 
 def get_files_in_directory(directory_path):
+    valid_extensions = {'.pdf', '.doc', '.docx', '.txt', '.zip'}
     files = []
     for root, dirs, filenames in os.walk(directory_path):
         for filename in filenames:
-            files.append(os.path.join(root, filename))
+            ext = os.path.splitext(filename)[1].lower()
+            if ext in valid_extensions:
+                files.append(os.path.join(root, filename))
     return files
 
 def make_trans(filename):
