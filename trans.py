@@ -3,8 +3,10 @@ import os
 import requests
 import base64
 
-with open('./url,txt', 'r') as f:
-	url = f.read().replace('\n', '')
+url = "http://localhost:4242/"
+
+with open("")
+
 
 def get_files_in_directory(directory_path):
     files = []
