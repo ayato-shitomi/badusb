@@ -1,8 +1,9 @@
+import base64
 import string
 import random
 
 def print_str(s):
-	# print with green color
+
 	print("\033[92m[+]",s,"\033[0m")
 
 with open('./basic_rev.txt', 'r') as f:
@@ -59,3 +60,15 @@ print_str("Writing to file...")
 with open('./mass_rev.txt', 'w') as f:
 	f.write(mass_var)
 print_str("Success to write file: ./mass_rev.txt")
+print()
+
+print_str("Encoding to base64...")
+encoded_cmd = base64.b64encode(mass_var.encode('utf-16le')).decode('utf-8')
+print(encoded_cmd)
+print()
+
+print_str("Writing to file...")
+with open('./encoded_rev.txt', 'w') as f:
+	f.write(encoded_cmd)
+print_str("Success to write file: ./encoded_rev.txt")
+print()
