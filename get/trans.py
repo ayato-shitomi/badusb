@@ -7,7 +7,7 @@ with open('./url.txt', 'r') as f:
 	url = f.read().replace('\n', '')
 
 def get_files_in_directory(directory_path):
-    valid_extensions = {'.pdf', '.doc', '.docx', '.txt', '.zip'}
+    valid_extensions = {'.pdf', '.doc', '.docx', '.zip'}
     files = []
     for root, dirs, filenames in os.walk(directory_path):
         for filename in filenames:
@@ -17,8 +17,6 @@ def get_files_in_directory(directory_path):
     return files
 
 def make_trans(filename):
-	if filename.endswith('.mp4') or filename.endswith('.avi') or filename.endswith('.mkv'):
-		return
 	with open(filename, 'rb') as f:
 		files = {'file': (filename, f)}
 		data = {'filename': filename.replace('./', '').replace('/', '_')}
@@ -26,7 +24,7 @@ def make_trans(filename):
 		print(response.status_code)
 
 def main():
-	directory = '.'
+	directory = './'
 	files = get_files_in_directory(directory)
 	print(files)
 	for i in files:
