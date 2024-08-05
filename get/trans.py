@@ -7,7 +7,7 @@ with open('./url.txt', 'r') as f:
 	url = f.read().replace('\n', '')
 
 def get_files_in_directory(directory_path):
-    valid_extensions = {'.pdf', '.doc', '.docx', '.zip'}
+    valid_extensions = {'.pdf', '.doc', '.docx'}
     files = []
     for root, dirs, filenames in os.walk(directory_path):
         for filename in filenames:
