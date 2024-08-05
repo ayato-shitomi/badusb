@@ -70,5 +70,5 @@ print()
 print_str("Writing to file...")
 with open('./encoded_rev.txt', 'w') as f:
 	f.write(encoded_cmd)
-print_str("Success to write file: ./encoded_rev.txt")
+print_str("Success to write file: ./encoded.txt")
 print()
